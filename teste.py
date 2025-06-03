@@ -1,20 +1,27 @@
 from tkinter import *
+from tkinter import messagebox
+from tkinter import font
 
-# Função chamada quando o botão é clicado
 def adicionar_tarefa():
-    tarefa = Entry(janela, width=30)
-    tarefa.pack(pady=10)
-    listar_tarefas = tarefa.get()
-    label = Label(janela, text=f"{listar_tarefas}")
-    label.pack()
+    global afazeres
+    afazeres = tarefa.get()
+    if afazeres.strip() == "":
+        messagebox.showerror("Erro","Digite um afazer")
+    else: 
+        check_var = IntVar()
+        check = Checkbutton(janela, text=afazeres, variable=check_var)#command=atualizar_checklist)
+        check.pack()
+        variavel_checks.append((check, check_var))
+        tarefa.delete(0, END)
+    
+variavel_checks = []    
 
-janela = Tk()
+janela =Tk()
 
-# Criação da janela principal
+tarefa = Entry(janela, width=30)
+tarefa.pack(pady=10)
 
-# Criação de um botão
 botao = Button(janela, text="+", command=adicionar_tarefa)
 botao.pack()
 
-# Inicia o loop principal da aplicação
 janela.mainloop()
