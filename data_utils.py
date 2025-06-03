@@ -3,13 +3,13 @@ from datetime import datetime
 current_datetime = datetime.now()
 
 def convert_date_to_pt ():
-    week_pt = {"Sunday": "Domingo", 
-               "Monday":"Segunda-feira", 
-                "Tuesday":"Terça-feira",
-                "Wednesday":"Quarta-feira",
-                "Thursday":"Quinta-feira",
-                "Friday":"Sexta-feira",
-                "Saturday":"Sábado"}
+    week_pt = {"Sunday": "domingo", 
+               "Monday":"segunda-feira", 
+                "Tuesday":"terça-feira",
+                "Wednesday":"quarta-feira",
+                "Thursday":"quinta-feira",
+                "Friday":"sexta-feira",
+                "Saturday":"sábado"}
 
     months_pt = {"January":"janeiro", "February":"fevereiro",
                 "March":"maio", "April":"abril", "May":"maio",
