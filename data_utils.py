@@ -33,5 +33,5 @@ def convert_date_to_pt ():
         if i == month:
             month = months_pt[i]
     
-    formatted_date = (f"Hoje é {week_day}, dia {day} de {month} de {year}")
+    formatted_date = (f"Hoje é {week_day},\n dia {day} de {month} de {year}")
     return formatted_date
