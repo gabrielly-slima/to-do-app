@@ -1,8 +1,10 @@
-from tkinter import *
-janela = Tk()
+import tkinter as tk
+from datetime import datetime
 
-rotulo = Label(janela, text= "To do list")
+janela = tk.Tk()
+janela.title("To do list")
 
-rotulo.grid()
+semana = []
+rotulo = Label(janela, text= "Hoje é dia ")
 
 janela.mainloop()
