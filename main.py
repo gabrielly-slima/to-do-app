@@ -1,11 +1,11 @@
 import tkinter as tk
-from datetime import datetime
 from data_utils import convert_date_to_pt
 
 janela = tk.Tk()
 janela.title("To do list")
+janela.geometry("300x500")
 
 rotulo = tk.Label(janela, text= convert_date_to_pt())
-rotulo.pack()
+rotulo.grid(column= 1, row=1)
 
 janela.mainloop()
